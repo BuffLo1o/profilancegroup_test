@@ -13,7 +13,7 @@ class GenerateLinkRequest extends FormRequest
     {
         return [
             'link' => [
-                'string',
+                'url',
                 'required',
             ]
         ];

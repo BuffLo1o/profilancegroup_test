@@ -28,6 +28,8 @@
     let short_link = $('div[class="short_link"]')
 
     submit.click(function () {
+        errors.html('')
+        short_link.html('')
         $.ajax({
             url: "{{ route('generate.link') }}",
             type: 'post',
@@ -38,7 +40,10 @@
                 // short_link.val = data['short_link']
             },
             error: function (data) {
-                console.log(data)
+                if (data['status'] === 422) {
+                    errors.html("Строка должна быть ссылкой")
+                }
+
             }
         })
     })
