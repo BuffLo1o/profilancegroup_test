@@ -1,0 +1,26 @@
+.main {
+    width: 800px;
+    height: 300px;
+    background-color: #ccc;
+    border-radius: 3px;
+    position: absolute;
+}
+
+.form {
+    position: relative;
+    margin-left: 15px;
+    width: auto;
+}
+
+.form-group {
+    margin-top: 15px;
+}
+
+.error {
+    color: red;
+    margin-top: 15px;
+}
+
+.short_link {
+    margin-top: 15px;
+}
